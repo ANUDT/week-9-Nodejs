@@ -9,7 +9,7 @@ return fs.writeToFileSync (path.join(process.cwd(), fileName, data));
 
 function init() {
 
-    inquirer.prompt(questions)..then(responses) => { ... });
+    inquirer.prompt(questions)..then(responses) => {...});
         console.log ("README.md generator File");
         const markdown = generateMarkdown(Responses);
     writeToFile("./README.md", generateMarkdown({ ...responses}));
