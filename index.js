@@ -12,5 +12,5 @@ function init() {
     inquirer.prompt(questions)..then(responses) => { ... });
         console.log ("README.md generator File");
         const markdown = generateMarkdown(Responses);
-    writeToFile(markdown);
+    writeToFile("./README.md", generateMarkdown({ ...responses}));
 };
