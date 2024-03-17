@@ -9,19 +9,14 @@ function generateMarkdown(data){
         'GPL-3.0': '[GNU General Public License v3.0](https://opensource.org/licenses/GPL-3.0)'
          };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+         if (license && licenseLinks.hasOwnProperty(license)) {
+        } else {
+       return '';
+	}
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+  return `# ${data.title}`;
 }
 
 module.exports = generateMarkdown;
