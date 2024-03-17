@@ -13,3 +13,12 @@ function writeFile(markdown) {
         }
     });
 }
+
+function init() {
+
+    inquirer
+        .prompt(questions)
+        .then({ answers }) =>
+    const markdown = generateMarkdown(answers);
+    writeFile(markdown);
+});
