@@ -1,13 +1,4 @@
+const inquirer = require("inquirer");
 
-
-
-const questions = [];
-
-
-function writeToFile(fileName, data) {}
-
-
-function init() {}
-
-// Function call to initialize app
-init();
+const generateMarkdown = require("./utils/generateMarkdown");
+const questions = require(`./utils/questions`);
