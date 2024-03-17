@@ -19,16 +19,7 @@ function generateMarkdown(data) {
   return `# ${data.title}`;
   by $ {data.title}
   ${renderLicenseBadge(data.license)}
-  * [License](##License)
-
-  ## Description
-
-  $ {data.Description}
-
   ##Tables of Contents:
-
-  ${renderLicenseLink(data.license)}
-
 * [Your Project Title](##Your Project Title)
 * [Description](##Description)
 * Table of Contents](##Table of content)
@@ -36,6 +27,21 @@ function generateMarkdown(data) {
 * [Usage](##Usage)
 * [Credits](##Credits)
 * [License](##License)
+${renderLicenseLink(data.license)}
 
+##Description
+${data.Description}
+
+##Installation
 ${data.Installation}
+
+##Usage
+${data.Usage}
+
+##Credits
+${data.Credits}
+
+Github- [${data.creator}](https://github.com/$(data.creator}/)
+
 module.exports = generateMarkdown;
+}
