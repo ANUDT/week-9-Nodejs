@@ -13,4 +13,5 @@ function init() {
         console.log ("README.md generator File");
         const markdown = generateMarkdown(Responses);
     writeToFile("./README.md", generateMarkdown({ ...responses}));
-};
+}
+init();
