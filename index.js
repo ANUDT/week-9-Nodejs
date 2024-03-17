@@ -18,7 +18,7 @@ function init() {
 
     inquirer
         .prompt(questions)
-        .then({ answers }) =>
+        .then({answers}) =>
     const markdown = generateMarkdown(answers);
     writeFile(markdown);
 });
