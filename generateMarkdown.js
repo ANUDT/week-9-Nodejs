@@ -49,32 +49,31 @@ function renderLicenseBadge(license) {
 }
 
 function generateMarkdown(data) {
-  return `# ${data.title}
-  by $ {data.title}
-  ${renderLicenseBadge(data.license)}
+  return `# ${data.project_name} by ${data.github}
+
   ##Tables of Contents:
-* [Your Project Title](##Your Project Title)
-* [Description](##Description)
-* Table of Contents](##Table of content)
-* [Installation](##Installation)
-* [Usage](##Usage)
-* [Credits](##Credits)
-* [License](##License)
-${renderLicenseLink(data.license)}
+* [project Name](##project_name)
+* [Description](##description)
+* [Installation](##installation)
+* [Usage](##usage)
+* [Credits](##credits)
+* [License](##license)
+${renderLicenseBadge(data.licence)}
+${renderLicenseLink(data.licence)}
 
 ##Description
-${data.Description}
+${data.description}
 
 ##Installation
-${data.Installation}
+${data.installation}
 
 ##Usage
-${data.Usage}
+${data.usage}
 
 ##Credits
-${data.Credits}
+${data.credits}
 
-Github- [${data.creator}](https://github.com/$(data.creator}/)`
-}
+Github- [${data.github}](https://github.com/${data.github}/)`
+} 
 
 module.exports = generateMarkdown;
