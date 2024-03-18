@@ -42,4 +42,5 @@ const questions = [
     choices: [`MIT`, `APACHE 2.0`, `CPL 3.0`, `none`].
     },
 ];
+
 module.exports = questions;
