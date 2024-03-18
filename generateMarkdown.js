@@ -52,4 +52,3 @@ ${data.Credits}
 Github- [${data.creator}](https://github.com/$(data.creator}/)`
 }
 module.exports = generateMarkdown;
-
