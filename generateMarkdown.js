@@ -16,7 +16,7 @@ function generateMarkdown(data){
 }
 
 function generateMarkdown(data) {
-  return `# ${data.title}`;
+  return `# ${data.title}
   by $ {data.title}
   ${renderLicenseBadge(data.license)}
   ##Tables of Contents:
@@ -41,7 +41,7 @@ ${data.Usage}
 ##Credits
 ${data.Credits}
 
-Github- [${data.creator}](https://github.com/$(data.creator}/)
-
-module.exports = generateMarkdown;
+Github- [${data.creator}](https://github.com/$(data.creator}/)`
 }
+module.exports = generateMarkdown;
+
