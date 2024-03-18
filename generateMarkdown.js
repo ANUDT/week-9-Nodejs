@@ -2,18 +2,26 @@ function generateMarkdown(data){
  return `# ${data.title}`
  }
 
- function renderLicenseLink(license) {
-  const licenseLinks = {
-        'MIT': '[MIT License](https://opensource.org/licenses/MIT)',
-        'Apache-2.0': '[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)',
-        'GPL-3.0': '[GNU General Public License v3.0](https://opensource.org/licenses/GPL-3.0)'
-         };
-
-         if (license && licenseLinks.hasOwnProperty(license)) {
-        } else {
-       return '';
-	}
-}
+ function renderLicenseBadge(license) {
+  let licenseBadge = ""
+  switch(license) {
+    case 'MIT':
+      licenseBadge = `![Static Badge](https://img.shields.io/badge/license-MIT-blue)`
+      break;
+     case 'APACHE 2.0':
+      licenseBadge = `![Static Badge](https://img.shields.io/badge/license/apache-2.0-blue)`
+      break;
+    case 'GPL 3.0':
+      licenseBadge = `![Static Badge](https://img.shields.io/badge/license-GPLv3-blue)`
+      break;
+    case 'BSD 3':
+      licenseBadge = `![Static Badge](https://img.shields.io/badge/BSD-3-Purple)`
+      break;
+    case 'None':
+      licenseBadge = `No License Used`
+      break;
+  }
+  return licenseBadge
 
 function generateMarkdown(data) {
   return `# ${data.title}
